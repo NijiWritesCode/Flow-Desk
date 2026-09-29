@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg-primary: #EBEFF2;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-tertiary: #F3F4F6;
+  
+  /* Bright fresh sidebar styling */
+  --color-bg-sidebar: #FFFFFF;
+  --color-bg-sidebar-hover: #F3F4F6;
+  --color-bg-sidebar-active: #C6F953;
+  --color-bg-hover: #F3F4F6;
+  --color-bg-active: #E5E7EB;
+  
+  /* Softer, darker text */
+  --color-text-primary: #1F2937;
+  --color-text-secondary: #6B7280;
+  --color-text-tertiary: #9CA3AF;
+  
+  /* The active nav text will be dark since the active background is bright lime */
+  --color-text-on-dark: #111827; 
+  
+  --color-border-primary: #F3F4F6;
+  --color-border-secondary: #E5E7EB;
+  --color-border-focus: #289C8E;
+  
+  /* Modern teal accent */
+  --color-accent-primary: #289C8E;
+  --color-accent-hover: #1E796E;
+  --color-accent-subtle: #E6F7F5;
+  
+  /* Statuses */
+  --color-status-success: #10B981;
+  --color-status-success-bg: #D1FAE5;
+  --color-status-warning: #F59E0B;
+  --color-status-warning-bg: #FEF3C7;
+  --color-status-danger: #EF4444;
+  --color-status-danger-bg: #FEE2E2;
+  --color-status-info: #3B82F6;
+  --color-status-info-bg: #DBEAFE;
+}
+
+body {
+  font-family: "Poppins", system-ui, sans-serif;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-primary);
+}
+
+.skeleton {
+  animation: skeleton-loading 1.5s infinite;
+  background-image: linear-gradient(
+    90deg,
+    var(--color-bg-tertiary) 0px,
+    var(--color-bg-active) 50%,
+    var(--color-bg-tertiary) 100%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
